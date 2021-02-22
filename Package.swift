@@ -7,13 +7,13 @@ let package = Package(
     products: [
         .library(
             name: "SwiftyVK",
-            targets: ["SwiftyVK_macOS", "SwiftyVK_iOS"]
-        ),
-        targets: [
+            targets: ["SwiftyVK"]
+        )
+    ],
+    targets: [
         .target(name: "SwiftyVK_macOS", dependencies: ["SwiftyVK_resources_macOS"]),
         .target(name: "SwiftyVK_iOS", dependencies: ["SwiftyVK_resources_iOS"]),
         .testTarget(name: "SwiftyVK_tests_macOS", dependencies: ["SwiftyVK_macOS"]),
         .testTarget(name: "SwiftyVK_tests_iOS", dependencies: ["SwiftyVK_iOS"]),
-        ]
     ]
 )
